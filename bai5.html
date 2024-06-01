@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //bai5:
+      function test(text) {
+        for (let i = 0; i < text.length; i++) {
+          let count = 1;
+          for (let j = i + 1; j < text.length; j++) {
+            if (text[i] == text[j]) {
+              count += 1;
+              text.splice(j, 1);
+              j -= 1;
+            }
+          }
+          console.log(`ký tự ${text[i]} xuất hiện ${count} lần`);
+        }
+      }
+      test(prompt("hãy nhập chuỗi ký tự bạn muốn kiểm tra").split(""));
+    </script>
+  </body>
+</html>
