@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //BÀI 1:Viết chương trình cho người dùng nhập vào 3 số, viết hàm kiểm tra để tìm ra số bé nhất và in ra số đó
+      function timSoBeNhat(a, b, c) {
+        return Math.min(a, b, c);
+      }
+      function main() {
+        let a = parseFloat(prompt("Nhập số thứ nhất:"));
+        let b = parseFloat(prompt("Nhập số thứ hai:"));
+        let c = parseFloat(prompt("Nhập số thứ ba:"));
+
+        if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+          let soBeNhat = timSoBeNhat(a, b, c);
+          alert("Số bé nhất trong 3 số là: " + soBeNhat);
+        } else {
+          alert("Vui lòng nhập số hợp lệ.");
+        }
+      }
+      main();
+    </script>
+  </body>
+</html>
